@@ -10,16 +10,11 @@ import geminiResponse from "./gemini.js"
 
 
 const app=express()
-// app.use(cors({
-//     // origin:"http://localhost:5173",
-//     origin:"https://iks-assistant.onrender.com",
-//     credentials:true
-// }))
 app.use(cors({
-  origin: ["http://localhost:5173", "https://iks-assistant.onrender.com"],
-  credentials: true
-}));
-app.options("*", cors());
+    // origin:"http://localhost:5173",
+    origin:"https://iks-assistant.onrender.com",
+    credentials:true
+}))
 
 const port=process.env.PORT || 5000
 app.use(express.json())
